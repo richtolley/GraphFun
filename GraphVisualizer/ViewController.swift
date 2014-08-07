@@ -9,9 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var nodeRequester = GVNodeRequester(baseURLString: "http://labyrinth.digitaslbi.com")
+        
+        let urlString = "Maze/Location/easy/start/json"
+        
+        nodeRequester.loadNode(urlString, callback: {
+            (node :GVGraphNode) in println(node.locationType)
+        })
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +29,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
 

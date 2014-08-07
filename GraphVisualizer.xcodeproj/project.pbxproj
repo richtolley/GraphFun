@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212602CD1993DA44009E72B4 /* GVGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212602CC1993DA44009E72B4 /* GVGraph.swift */; };
+		212602CF1993DAA0009E72B4 /* GVGraphFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212602CE1993DAA0009E72B4 /* GVGraphFactory.swift */; };
+		216C07CC199384B700AB906E /* GVNodeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C07CB199384B700AB906E /* GVNodeRequester.swift */; };
+		216C07D01993B1D700AB906E /* GVGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C07CF1993B1D700AB906E /* GVGraphNode.swift */; };
 		2184EB6D19937CBD008A0F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184EB6C19937CBD008A0F61 /* AppDelegate.swift */; };
 		2184EB6F19937CBD008A0F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184EB6E19937CBD008A0F61 /* ViewController.swift */; };
 		2184EB7219937CBD008A0F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2184EB7019937CBD008A0F61 /* Main.storyboard */; };
@@ -25,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212602CC1993DA44009E72B4 /* GVGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GVGraph.swift; sourceTree = "<group>"; };
+		212602CE1993DAA0009E72B4 /* GVGraphFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GVGraphFactory.swift; sourceTree = "<group>"; };
+		216C07CB199384B700AB906E /* GVNodeRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GVNodeRequester.swift; sourceTree = "<group>"; };
+		216C07CF1993B1D700AB906E /* GVGraphNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GVGraphNode.swift; sourceTree = "<group>"; };
 		2184EB6719937CBD008A0F61 /* GraphVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2184EB6B19937CBD008A0F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2184EB6C19937CBD008A0F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +62,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		216C07CD199384C000AB906E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				216C07CB199384B700AB906E /* GVNodeRequester.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		216C07CE1993B1BB00AB906E /* Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				216C07CF1993B1D700AB906E /* GVGraphNode.swift */,
+				212602CC1993DA44009E72B4 /* GVGraph.swift */,
+			);
+			name = "Model Classes";
+			sourceTree = "<group>";
+		};
 		2184EB5E19937CBD008A0F61 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +100,9 @@
 		2184EB6919937CBD008A0F61 /* GraphVisualizer */ = {
 			isa = PBXGroup;
 			children = (
+				212602CE1993DAA0009E72B4 /* GVGraphFactory.swift */,
+				216C07CE1993B1BB00AB906E /* Model Classes */,
+				216C07CD199384C000AB906E /* Network */,
 				2184EB6C19937CBD008A0F61 /* AppDelegate.swift */,
 				2184EB6E19937CBD008A0F61 /* ViewController.swift */,
 				2184EB7019937CBD008A0F61 /* Main.storyboard */,
@@ -208,6 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212602CF1993DAA0009E72B4 /* GVGraphFactory.swift in Sources */,
+				216C07CC199384B700AB906E /* GVNodeRequester.swift in Sources */,
+				212602CD1993DA44009E72B4 /* GVGraph.swift in Sources */,
+				216C07D01993B1D700AB906E /* GVGraphNode.swift in Sources */,
 				2184EB6F19937CBD008A0F61 /* ViewController.swift in Sources */,
 				2184EB6D19937CBD008A0F61 /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +429,7 @@
 				2184EB8519937CBD008A0F61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2184EB8619937CBD008A0F61 /* Build configuration list for PBXNativeTarget "GraphVisualizerTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +438,7 @@
 				2184EB8819937CBD008A0F61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
