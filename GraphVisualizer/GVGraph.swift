@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ * Model object representing a single graph
+ */
+
 class GVGraph: NSObject {
    
     var allNodes : NSMutableDictionary
@@ -25,5 +29,17 @@ class GVGraph: NSObject {
             
         }
         
+    }
+    
+    func containsNodeWithId(locationId : NSString) -> Bool
+    {
+        var rVal : Bool = false
+        var node : GVGraphNode = self.allNodes[locationId] as GVGraphNode
+        
+        if(node != nil)
+        {
+            rVal = true
+        }
+        return rVal
     }
 }

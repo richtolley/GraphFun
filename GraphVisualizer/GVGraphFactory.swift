@@ -10,18 +10,29 @@ import UIKit
 
 class GVGraphFactory: NSObject {
    
+    var nodeRequester : GVNodeRequester?
+    
     func generateGraphWithStartLocation(startLocation : NSString,completion : (GVGraph) -> Void)
     {
         let graph : GVGraph = GVGraph()
         
-        let nodeRequester = GVNodeRequester(baseURLString:"http://labyrinth.digitaslbi.com")
+        self.nodeRequester = GVNodeRequester(baseURLString:"http://labyrinth.digitaslbi.com")
         
-        nodeRequester.loadNode(startLocation, callback: { (node) -> Void in
+        self.nodeRequester?.loadNode(startLocation, callback: { (node) -> Void in
             
+            graph.addNode(node)
             
-            
+            for exitLocation in node.exits {
+                
+                if !graph.containsNodeWithId(exitLocation as NSString) {
+                    
+                    
+                }
+            }
         })
         
     }
+    
+    
     
 }
